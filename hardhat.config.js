@@ -13,7 +13,10 @@ const config = {
       gasPrice: 1000000000,
     },
   },
+  sourcify: {
+    enabled: true
+  }
 };
 
 module.exports = config;                                  
-//chai contract deployed to: 0x847E469131a1AFf3aC5e0C7c24813e182D9a9B45
+//crowdfunding contract deployed to: 0x64C68A81BD4F09d317d16a013EecBB1C15913268
