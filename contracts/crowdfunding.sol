@@ -47,5 +47,3 @@ contract Crowdfunding {
         emit CampaignEnded(_campaignId, campaign.beneficiary, campaign.amountRaised);
     }
 }
-
-  
