@@ -1,7 +1,9 @@
 //SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.24;
 
 contract Crowdfunding {
+
+    
     struct Campaign {
         string title;
         string description;

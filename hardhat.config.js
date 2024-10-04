@@ -1,37 +1,19 @@
-const dotenv = require('dotenv');
 
-// Load environment variables from .env file
-dotenv.config();
+const { HardhatUserConfig } = require("hardhat/config");
 require("@nomicfoundation/hardhat-toolbox");
+require('dotenv').config();
 
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
- 
+const config = {
+  solidity: "0.8.24",
   networks: {
-
-
-    sepolia: {
-      url: 'https://sepolia.infura.io/v3/e9c1880243764d849a4970565ccbf8c7',
-      accounts: [process.env.SECRET],
-      // gasPrice: 1000000000,
+    // for testnet
+    'lisk-sepolia': {
+      url: 'https://rpc.sepolia-api.lisk.com',
+      accounts: [process.env.ACCOUNT_PRIVATE_KEY],
+      gasPrice: 1000000000,
     },
-  
   },
-  solidity: {
-    compilers: [
-      {
-        version: "0.8.24",
-        settings: {
-          optimizer: {
-            enabled: false,
-            runs: 200,
-          },
-        },
-      },
-      
-    ],
-  },
- 
-  // This is a sample solc configuration that specifies which version of solc to use
-
 };
+
+module.exports = config;                                  
+//chai contract deployed to: 0x847E469131a1AFf3aC5e0C7c24813e182D9a9B45
